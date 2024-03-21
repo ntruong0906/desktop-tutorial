@@ -36,8 +36,3 @@ input::-webkit-inner-spin-button {
     z-index: 2;
     position: relative;
 }
-.h-line{
-    width: 150px ;
-    margin: 0 auto;
-    height: 1.7px;
-}
