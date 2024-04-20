@@ -5,9 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2T Hotel - HOME</title>
-    <?php require ('inc/links.php'); ?>
+    <title>2T Hotel</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&family=Poppins:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/common.css">
     <style>
         @media screen and (max-width: 575px) {
             .availability-form {
@@ -19,7 +25,7 @@
 </head>
 
 <body class="bg-light">
-    <?php require ('inc/header.php'); ?>
+   <?php require('inc/header.php'); ?>
 
     <!-- Carousel -->
     <div class="container-fluid px-lg-4 mt-4">
@@ -128,15 +134,6 @@
                                 Room heater
                             </span>
                         </div>
-                        <div class="guests mb-4">
-                            <h6 class="mb-1">Guests</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                5 Adults
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                4 Childrens
-                            </span>
-                        </div>
                         <div class="rating mb-4">
                             <h6 class="mb-1">Rating</h6>
                             <span class="badge rounded-pill bg-light">
@@ -191,15 +188,6 @@
                                 Room heater
                             </span>
                         </div>
-                        <div class="guests mb-4">
-                            <h6 class="mb-1">Guests</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                5 Adults
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                4 Childrens
-                            </span>
-                        </div>
                         <div class="rating mb-4">
                             <h6 class="mb-1">Rating</h6>
                             <span class="badge rounded-pill bg-light">
@@ -252,15 +240,6 @@
                             </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
                                 Room heater
-                            </span>
-                        </div>
-                        <div class="guests mb-4">
-                            <h6 class="mb-1">Guests</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                5 Adults
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                4 Childrens
                             </span>
                         </div>
                         <div class="rating mb-4">
@@ -432,15 +411,45 @@
     </div>
 
     <!-- footer -->
-    <?php require ('inc/footer.php'); ?>
+    <div class="container-fluid bg-white mt-5">
+        <div class="row">
+            <div class="col-lg-4 p-4">
+                <h3 class="h-font fw-bold fs-3">2T HOTEL</h3>
+                <p>
+
+                </p>
+            </div>
+            <div class="col-lg-4 p-4">
+                <h5 class="mb-3">Links</h5>
+                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Home</a><br>
+                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Rooms</a><br>
+                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Facilities</a><br>
+                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">Contact us</a><br>
+                <a href="#" class="d-inline-block mb-2 text-dark text-decoration-none">About</a>
+            </div>
+            <div class="col-lg-4 p-4">
+                <h5 class="mb-3">Follow us</h5>
+                <a href="#" class="d-inline-block text-dark text-decoration-none md-2">
+                    <i class="bi bi-facebook me-1"></i> Facebook
+                </a><br>
+                <a href="#" class="d-inline-block text-dark text-decoration-none md-2">
+                    <i class="bi bi-youtube me-1"></i> Youtube
+                </a><br>
+                <a href="#" class="d-inline-block text-dark text-decoration-none ">
+                    <i class="bi bi-instagram me-1"></i> Instagram
+                </a><br>
+            </div>
+        </div>
+    </div>
 
 
+    
 
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script>
         var swiper = new Swiper(".swiper-container", {
             spaceBetween: 30,

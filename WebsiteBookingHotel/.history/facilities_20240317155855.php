@@ -5,21 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2T Hotel - HOME</title>
-    <?php require ('inc/links.php'); ?>
+    <title>2T Hotel - FACILITIES</title>
+    <?php require('inc/links.php'); ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-        @media screen and (max-width: 575px) {
-            .availability-form {
-                margin: 25px;
-                padding: 0 35px;
-            }
+    @media screen and (max-width: 575px) {
+        .availability-form {
+            margin: 25px;
+            padding: 0 35px;
         }
+    }
     </style>
 </head>
 
 <body class="bg-light">
-    <?php require ('inc/header.php'); ?>
+    <?php require('inc/header.php'); ?>
 
     <!-- Carousel -->
     <div class="container-fluid px-lg-4 mt-4">
@@ -128,15 +128,6 @@
                                 Room heater
                             </span>
                         </div>
-                        <div class="guests mb-4">
-                            <h6 class="mb-1">Guests</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                5 Adults
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                4 Childrens
-                            </span>
-                        </div>
                         <div class="rating mb-4">
                             <h6 class="mb-1">Rating</h6>
                             <span class="badge rounded-pill bg-light">
@@ -191,15 +182,6 @@
                                 Room heater
                             </span>
                         </div>
-                        <div class="guests mb-4">
-                            <h6 class="mb-1">Guests</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                5 Adults
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                4 Childrens
-                            </span>
-                        </div>
                         <div class="rating mb-4">
                             <h6 class="mb-1">Rating</h6>
                             <span class="badge rounded-pill bg-light">
@@ -252,15 +234,6 @@
                             </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
                                 Room heater
-                            </span>
-                        </div>
-                        <div class="guests mb-4">
-                            <h6 class="mb-1">Guests</h6>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                5 Adults
-                            </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap lh-base">
-                                4 Childrens
                             </span>
                         </div>
                         <div class="rating mb-4">
@@ -432,7 +405,7 @@
     </div>
 
     <!-- footer -->
-    <?php require ('inc/footer.php'); ?>
+    <?php require('inc/footer.php'); ?>
 
 
 
@@ -440,49 +413,49 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-        </script>
+    </script>
     <script>
-        var swiper = new Swiper(".swiper-container", {
-            spaceBetween: 30,
-            effect: "fade",
-            loop: true,
-            autoplay: {
-                delay: 3500,
-                disableOnInteraction: false,
-            }
-        });
-        var swiper = new Swiper(".swiper-testimonials", {
-            effect: "coverflow",
-            grabCursor: true,
-            centeredSlides: true,
-            slidesPerView: "auto",
-            slidesPerView: "3",
-            loop: true,
-            coverflowEffect: {
-                rotate: 50,
-                stretch: 0,
-                depth: 100,
-                modifier: 1,
-                slideShadows: false,
+    var swiper = new Swiper(".swiper-container", {
+        spaceBetween: 30,
+        effect: "fade",
+        loop: true,
+        autoplay: {
+            delay: 3500,
+            disableOnInteraction: false,
+        }
+    });
+    var swiper = new Swiper(".swiper-testimonials", {
+        effect: "coverflow",
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: "auto",
+        slidesPerView: "3",
+        loop: true,
+        coverflowEffect: {
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: false,
+        },
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        breakpoints: {
+            320: {
+                slidesPerView: 1,
             },
-            pagination: {
-                el: ".swiper-pagination",
+            640: {
+                slidesPerView: 1,
             },
-            breakpoints: {
-                320: {
-                    slidesPerView: 1,
-                },
-                640: {
-                    slidesPerView: 1,
-                },
-                768: {
-                    slidesPerView: 2,
-                },
-                1024: {
-                    slidesPerView: 3,
-                },
-            }
-        });
+            768: {
+                slidesPerView: 2,
+            },
+            1024: {
+                slidesPerView: 3,
+            },
+        }
+    });
     </script>
 </body>
 
