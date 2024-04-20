@@ -89,7 +89,7 @@
                             </div>
                         </div>
                     </div>
-                    <nav>
+                <nav>
             </div>
 
             <div class="col-lg-9 col-md-12 px-4">
