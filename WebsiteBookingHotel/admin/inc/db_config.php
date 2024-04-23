@@ -46,7 +46,7 @@ function update($sql, $values, $datatypes)
     if ($stmt = mysqli_prepare($con, $sql)) {
         mysqli_stmt_bind_param($stmt, $datatypes,...$values);
         if (mysqli_stmt_execute($stmt)) {
-            $res = nysqli_stmt_affected_rows($stmt);
+            $res = mysqli_stmt_affected_rows($stmt);
             mysqli_stmt_close($stmt);
             return $res;
         } else {
