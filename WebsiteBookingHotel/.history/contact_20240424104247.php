@@ -8,20 +8,20 @@
     <title>2T Hotel - CONTACT</title>
     <?php require ('inc/links.php'); ?>
     <style>
-    .pop:hover {
-        border-top-color: var(--teal) !important;
-        transform: scale(1.03);
-        transition: all 0.3s;
-    }
+        .pop:hover {
+            border-top-color: var(--teal) !important;
+            transform: scale(1.03);
+            transition: all 0.3s;
+        }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-    @media screen and (max-width: 575px) {
-        .availability-form {
-            margin: 25px;
-            padding: 0 35px;
+        @media screen and (max-width: 575px) {
+            .availability-form {
+                margin: 25px;
+                padding: 0 35px;
+            }
         }
-    }
     </style>
 </head>
 
@@ -67,13 +67,13 @@
 
                     <h5 class="mt-4">Follow us</h5>
                     <a href="#" class="d-inline-block text-dark fs-5 me-2">
-                        <i class="bi bi-facebook me-1"></i>
+                        <i class="bi bi-facebook"></i>
                     </a>
                     <a href="#" class="d-inline-block text-dark fs-5 me-2">
-                        <i class="bi bi-youtube me-1"></i>
+                        <i class="bi bi-youtube"></i>
                     </a>
                     <a href="#" class="d-inline-block text-dark fs-5 ">
-                        <i class="bi bi-instagram me-1"></i>
+                        <i class="bi bi-instagram"></i>
                     </a>
                 </div>
             </div>
@@ -114,49 +114,49 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+        </script>
     <script>
-    var swiper = new Swiper(".swiper-container", {
-        spaceBetween: 30,
-        effect: "fade",
-        loop: true,
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        }
-    });
-    var swiper = new Swiper(".swiper-testimonials", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        slidesPerView: "3",
-        loop: true,
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
+        var swiper = new Swiper(".swiper-container", {
+            spaceBetween: 30,
+            effect: "fade",
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            }
+        });
+        var swiper = new Swiper(".swiper-testimonials", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            slidesPerView: "3",
+            loop: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
             },
-            640: {
-                slidesPerView: 1,
+            pagination: {
+                el: ".swiper-pagination",
             },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-        }
-    });
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
     </script>
 </body>
 

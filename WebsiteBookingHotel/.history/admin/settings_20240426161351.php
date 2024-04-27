@@ -296,7 +296,7 @@ adminLogin();
         general_s_form.addEventListener('submit', function(e) {
             e.preventDefault();
             upd_general(site_title_inp.value, site_about_inp.value)
-        });
+        })
 
         function upd_general(site_title_val, site_about_val) {
             let xhr = new XMLHttpRequest();
@@ -373,7 +373,7 @@ adminLogin();
         contacts_s_form.addEventListener('submit', function(e) {
             e.preventDefault();
             udp_contacts();
-        });
+        })
 
         function udp_contacts() {
             let index = ['address', 'google_map', 'pn1', 'pn2', 'email', 'fb', 'ytb', 'ins', 'iframe'];

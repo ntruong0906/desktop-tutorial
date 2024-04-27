@@ -296,7 +296,7 @@ adminLogin();
         general_s_form.addEventListener('submit', function(e) {
             e.preventDefault();
             upd_general(site_title_inp.value, site_about_inp.value)
-        });
+        })
 
         function upd_general(site_title_val, site_about_val) {
             let xhr = new XMLHttpRequest();
@@ -373,7 +373,7 @@ adminLogin();
         contacts_s_form.addEventListener('submit', function(e) {
             e.preventDefault();
             udp_contacts();
-        });
+        })
 
         function udp_contacts() {
             let index = ['address', 'google_map', 'pn1', 'pn2', 'email', 'fb', 'ytb', 'ins', 'iframe'];
@@ -390,14 +390,10 @@ adminLogin();
             xhr.open("POST", "ajax/settings_crud.php", true);
             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
             xhr.onload = function() {
-                var myModal = document.getElementById('contacts-s');
-                var modal = bootstrap.Modal.getInstance(myModal)
-                modal.hide();
                 if (this.responseText == 1) {
                     alert('success', 'Changes Saved!');
-                    get_contacts();
                 } else {
-                    alert('error', 'No Changes Made!');
+                    alert('success', 'Shutdown mode changes off!');
                 }
                 get_general();
             }

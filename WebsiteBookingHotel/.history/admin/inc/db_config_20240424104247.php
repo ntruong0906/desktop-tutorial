@@ -1,9 +1,9 @@
 <?php
 
-$hname = 'localhost:8080';
+$hname = 'localhost';
 $uname = 'root';
 $pass = "";
-$db = "websitebookinghotel";
+$db = "hbwebsite";
 
 $con = mysqli_connect($hname, $uname, $pass, $db);
 

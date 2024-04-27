@@ -373,7 +373,7 @@ adminLogin();
         contacts_s_form.addEventListener('submit', function(e) {
             e.preventDefault();
             udp_contacts();
-        });
+        })
 
         function udp_contacts() {
             let index = ['address', 'google_map', 'pn1', 'pn2', 'email', 'fb', 'ytb', 'ins', 'iframe'];
