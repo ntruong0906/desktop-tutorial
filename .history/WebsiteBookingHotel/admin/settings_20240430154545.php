@@ -33,7 +33,7 @@ adminLogin();
 
     <div class="container-fluid" id="main-content">
         <div class="row">
-            < class="col-lg-10 ms-auto p-4 overflow-hidden">
+            <div class="col-lg-10 ms-auto p-4 overflow-hidden">
                 <h3 class="mb-4">SETTINGS</h3>
 
                 <!--General settings section -->
@@ -272,47 +272,47 @@ adminLogin();
                                             <i class="bi bi-trash"></i> Delete
                                         </button>
                                     </div>
-                                    <p class="card-text text-center px-3 py-2">Random Name</p>
+                                    <p class="card-text">Last updated 3 min ago</p>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
 
-                <!--Management Team modal -->
-                <div class="modal fade" id="team-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1"
-                    aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <form id="team_s_form">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h1 class="modal-title fs-5">ADD Team Member</h1>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
-                                        aria-label="Close"></button>
+            <!--Management Team modal -->
+            <div class="modal fade" id="team-s" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1"
+                aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <form id="team_s_form">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h1 class="modal-title fs-5">ADD Team Member</h1>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Name</label>
+                                    <input type="text" name="member_name" id="member_name_inp"
+                                        class="form-control shadow-none" required>
                                 </div>
-                                <div class="modal-body">
-                                    <div class="mb-3">
-                                        <label class="form-label fw-bold">Name</label>
-                                        <input type="text" name="member_name" id="member_name_inp"
-                                            class="form-control shadow-none" required>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label class="form-label fw-bold">Picture</label>
-                                        <input type="file" name="member_picture" id="member_picture_inp"
-                                            accept=".jpg, .png , .webp , .jpeg" class="form-control shadow-none"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" onclick="member_name.value='',member_picture.value=''"
-                                        class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
-                                    <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
+                                <div class="mb-3">
+                                    <label class="form-label fw-bold">Picture</label>
+                                    <input type="file" name="member_picture" id="member_picture_inp"
+                                        accept=".jpg, .png , .webp , .jpeg" class="form-control shadow-none" required>
                                 </div>
                             </div>
-                        </form>
-                    </div>
+                            <div class="modal-footer">
+                                <button type="button" onclick="" class="btn text-secondary shadow-none"
+                                    data-bs-dismiss="modal">CANCEL</button>
+                                <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
+                            </div>
+                        </div>
+                    </form>
                 </div>
+            </div>
         </div>
     </div>
 
@@ -500,45 +500,15 @@ adminLogin();
                 alert('success', 'New Member Added!');
                 member_name_inp.value = '';
                 member_picture_inp.value = '';
-                get_members();
             }
         }
 
         xhr.send(data);
     }
 
-    function get_members() {
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/settings_crud.php", true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-        xhr.onload = function() {
-
-        }
-
-        xhr.send('get_members');
-    }
-
-    function rem_member(val) {
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/settings_crud.php", true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-        xhr.onload = function() {
-            if (this.responseText == 1) {
-                alert('success', 'Member removed!');
-                get_members();
-            } else {
-                alert('error', 'Server down!');
-            }
-        }
-
-        xhr.send('rem_member=' + val);
-    }
     window.onload = function() {
         get_general();
         get_contacts();
-        get_members();
     }
     </script>
 </body>

@@ -305,7 +305,7 @@ adminLogin();
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" onclick="member_name.value='',member_picture.value=''"
+                                    <button type="button" onclick="member_name.value"
                                         class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
                                     <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
                                 </div>

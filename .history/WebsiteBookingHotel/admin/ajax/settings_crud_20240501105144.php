@@ -103,7 +103,7 @@
         $res = select($pre_q,$values,'i');
         $img = mysqli_fetch_assoc($res);
 
-        if(deleteImage($img['picture'],ABOUT_FOLDER)){
+        if(deleteImage($img[],ABOUT_FOLDER)){
             $q = "DELETE FROM `team_details` WHERE `sr_no`=?";
             $res = delete($q,$values,'i');
             echo $res;

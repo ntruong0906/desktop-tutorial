@@ -1,7 +1,6 @@
 <?php
 
-define ('SITE_URL','http://127.0.0.1/hbwebsite/');
-define ('ABOUT_IMG_PATH',SITE_URL.'images/about/');
+
 define ('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/hbwebsite/images/');
 define ('ABOUT_FOLDER','about/');
 function adminLogin()
@@ -42,25 +41,6 @@ function uploadImage($image,$folder){
         return 'ivn_img';
     }else if(($image['size']/(1024*1024))> 2){
         return 'ivn_size';
-    }else{
-        $ext = pathinfo($image['name'],PATHINFO_EXTENSION);
-        $rname = 'IMG_'.random_int(11111,99999).".$ext";
-        $img_path = UPLOAD_IMAGE_PATH.$folder.$rname;
-        if(move_uploaded_file($image['tmp_name'],$img_path)){
-            return $rname;
-        }
-        else{
-            return 'udp_failed';
-        }
-    }
-}
-
-
-function deleteImage($image , $folder){
-    if(unlink(UPLOAD_IMAGE_PATH.$folder.$image)){
-        return true;
-    }else{
-        return false;
     }
 }
 ?>

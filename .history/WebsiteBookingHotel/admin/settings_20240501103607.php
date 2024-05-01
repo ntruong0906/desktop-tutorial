@@ -305,8 +305,8 @@ adminLogin();
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" onclick="member_name.value='',member_picture.value=''"
-                                        class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
+                                    <button type="button" onclick="" class="btn text-secondary shadow-none"
+                                        data-bs-dismiss="modal">CANCEL</button>
                                     <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
                                 </div>
                             </div>
@@ -533,7 +533,7 @@ adminLogin();
             }
         }
 
-        xhr.send('rem_member=' + val);
+        xhr.send('rem_member' + val);
     }
     window.onload = function() {
         get_general();

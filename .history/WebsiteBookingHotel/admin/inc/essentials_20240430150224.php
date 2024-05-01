@@ -1,7 +1,6 @@
 <?php
 
-define ('SITE_URL','http://127.0.0.1/hbwebsite/');
-define ('ABOUT_IMG_PATH',SITE_URL.'images/about/');
+
 define ('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/hbwebsite/images/');
 define ('ABOUT_FOLDER','about/');
 function adminLogin()
@@ -50,17 +49,8 @@ function uploadImage($image,$folder){
             return $rname;
         }
         else{
-            return 'udp_failed';
+            return 'udp_failed'
         }
-    }
-}
-
-
-function deleteImage($image , $folder){
-    if(unlink(UPLOAD_IMAGE_PATH.$folder.$image)){
-        return true;
-    }else{
-        return false;
     }
 }
 ?>

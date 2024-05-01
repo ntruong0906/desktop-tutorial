@@ -305,8 +305,8 @@ adminLogin();
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" onclick="member_name.value='',member_picture.value=''"
-                                        class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
+                                    <button type="button" onclick="" class="btn text-secondary shadow-none"
+                                        data-bs-dismiss="modal">CANCEL</button>
                                     <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
                                 </div>
                             </div>
@@ -500,7 +500,6 @@ adminLogin();
                 alert('success', 'New Member Added!');
                 member_name_inp.value = '';
                 member_picture_inp.value = '';
-                get_members();
             }
         }
 
@@ -513,32 +512,29 @@ adminLogin();
         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
         xhr.onload = function() {
+            general_data = JSON.parse(this.responseText);
 
-        }
+            site_title.innerText = general_data.site_title;
+            site_about.innerText = general_data.site_about;
 
-        xhr.send('get_members');
-    }
+            site_title_inp.value = general_data.site_title;
+            site_about_inp.value = general_data.site_about;
 
-    function rem_member(val) {
-        let xhr = new XMLHttpRequest();
-        xhr.open("POST", "ajax/settings_crud.php", true);
-        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-
-        xhr.onload = function() {
-            if (this.responseText == 1) {
-                alert('success', 'Member removed!');
-                get_members();
+            if (general_data.shutdown == 0) {
+                shutdown_toggle.checked = false;
+                shutdown_toggle.value = 0;
             } else {
-                alert('error', 'Server down!');
+                shutdown_toggle.checked = true;
+                shutdown_toggle.value = 1;
             }
         }
 
-        xhr.send('rem_member=' + val);
+        xhr.send('get_general');
     }
+
     window.onload = function() {
         get_general();
         get_contacts();
-        get_members();
     }
     </script>
 </body>

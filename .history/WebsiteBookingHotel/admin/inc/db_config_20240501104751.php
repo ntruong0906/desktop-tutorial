@@ -92,10 +92,10 @@ function delete($sql, $values, $datatypes)
             return $res;
         } else {
             mysqli_stmt_close($stmt);
-            die("Query cannot be executed - Delete");
+            die("Query cannot be executed - Update");
         }
     } else {
-        die("Query cannot be executed - Delete");
+        die("Query cannot be executed - Update");
     }
 }
 ?>
