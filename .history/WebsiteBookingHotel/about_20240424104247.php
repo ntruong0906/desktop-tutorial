@@ -8,24 +8,24 @@
     <title>2T Hotel - ABOUT</title>
     <?php require ('inc/links.php'); ?>
     <style>
-    .pop:hover {
-        border-top-color: var(--teal) !important;
-        transform: scale(1.03);
-        transition: all 0.3s;
-    }
+        .pop:hover {
+            border-top-color: var(--teal) !important;
+            transform: scale(1.03);
+            transition: all 0.3s;
+        }
     </style>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-    @media screen and (max-width: 575px) {
-        .availability-form {
-            margin: 25px;
-            padding: 0 35px;
+        @media screen and (max-width: 575px) {
+            .availability-form {
+                margin: 25px;
+                padding: 0 35px;
+            }
         }
-    }
 
-    .box {
-        border-top-color: var(--teal) !important;
-    }
+        .box {
+            border-top-color: var(--teal) !important;
+        }
     </style>
 </head>
 
@@ -35,7 +35,7 @@
     <div class="my-5 px-4">
         <h2 class="fw-bold h-font text-center">ABOUT US</h2>
         <div class="h-line bg-dark"></div>
-
+        
     </div>
     <div class="container">
         <div class="row justify-content-between align-items-center">
@@ -79,18 +79,6 @@
             <div class="container px-4">
                 <div class="swiper mySwiper">
                     <div class="swiper-wrapper mb-5">
-                        <?php
-                        $about_r = selectAll('team_details');
-                        $path = ABOUT_IMG_PATH;
-                        while($row = mysqli_fetch_assoc($about_r)){
-                            echo<<<data
-                            <div class="swiper-slide bg-white text-center overflow-hidden rounded ">
-                            <img src="$path$row[picture]" class="w-100">
-                            <h5 class="mt-2">$row[name]</h5>
-                        </div>
-                        data;
-                        }
-                        ?>
                         <div class="swiper-slide bg-white text-center overflow-hidden rounded ">
                             <img src="images/about/IMG_17352.jpg" class="w-100">
                             <h5 class="mt-2">Random Name</h5>
@@ -128,27 +116,27 @@
 
 
     <script>
-    var swiper = new Swiper(".mySwiper", {
-        slidesPerView: 4,
-        spaceBetween: 40,
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
+        var swiper = new Swiper(".mySwiper", {
+            slidesPerView: 4,
+            spaceBetween: 40,
+            pagination: {
+                el: ".swiper-pagination",
             },
-            640: {
-                slidesPerView: 1,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-        }
-    });
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 3,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
     </script>
 
 
@@ -156,49 +144,49 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+        </script>
     <script>
-    var swiper = new Swiper(".swiper-container", {
-        spaceBetween: 30,
-        effect: "fade",
-        loop: true,
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        }
-    });
-    var swiper = new Swiper(".swiper-testimonials", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        slidesPerView: "3",
-        loop: true,
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
+        var swiper = new Swiper(".swiper-container", {
+            spaceBetween: 30,
+            effect: "fade",
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            }
+        });
+        var swiper = new Swiper(".swiper-testimonials", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            slidesPerView: "3",
+            loop: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
             },
-            640: {
-                slidesPerView: 1,
+            pagination: {
+                el: ".swiper-pagination",
             },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-        }
-    });
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
     </script>
 </body>
 

@@ -201,7 +201,7 @@ adminLogin();
                                                     <div class="input-group mb-3">
                                                         <span class="input-group-text"><i
                                                                 class="bi bi-telephone-fill"></i></span>
-                                                        <input type="number" name="pn2" id="pn2_inp"
+                                                        <input type="text" name="pn2" id="pn2_inp"
                                                             class="form-control shadow-none">
                                                     </div>
                                                 </div>

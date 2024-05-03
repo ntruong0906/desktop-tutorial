@@ -55,49 +55,33 @@
                     <h5>Address</h5>
                     <a href="https://maps.app.goo.gl/21SFMe4NnyXLEMTh8" target="_blank"
                         class="d-inline-block text-decoration-none text-dark">
-                        <i class="bi bi-geo-alt-fill"></i> <?php echo $contact_r['address'] ?>
+                        <i class="bi bi-geo-alt-fill"></i> XYZ, Vũng Tàu...
                     </a>
 
                     <h5 class="mt-4">Call us</h5>
-                    <a href="tel: +<?php echo $contact_r['pn1'] ?>"
-                        class="d-inline-block mb-2 text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i>+<?php echo $contact_r['pn1'] ?>
+                    <a href="tel: +84398897449" class="d-inline-block mb-2 text-decoration-none text-dark">
+                        <i class="bi bi-telephone-fill"></i>+84398897449
                     </a>
 
                     <br>
-                    <?php 
-                      if($contact_r ['pn2']){
-                        echo<<<data
-                        <a href="tel: +$contact_r[pn2]" class="d-inline-block text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i>+$contact_r[pn2]
+                    <a href="tel: +84902034018" class="d-inline-block text-decoration-none text-dark">
+                        <i class="bi bi-telephone-fill"></i>+84902034018
                     </a>
-                    data;
-                      }
-                    ?>
-
 
                     <h5 class="mt-4 ">Email</h5>
-                    <a href="<?php echo $contact_r['email'] ?>"
+                    <a href="gmail: phannhattruong8291@gmail.com"
                         class="d-inline-block mb-2 text-decoration-none text-dark">
-                        <i class="bi bi-envelope-fill"></i><?php echo $contact_r['email'] ?>
+                        <i class="bi bi-envelope-fill"></i>phannhattruong8291@gmail.com
                     </a>
 
                     <h5 class="mt-4">Follow us</h5>
-                    <?php  
-                    if($contact_r['fb'] != ''){
-                        echo<<< data
-                        <a href="$contact_r[fb]" class="d-inline-block text-dark fs-5 me-2">
+                    <a href="#" class="d-inline-block text-dark fs-5 me-2">
                         <i class="bi bi-facebook me-1"></i>
                     </a>
-                    data;
-                    }
-                    ?>
-
-
-                    <a href="<?php echo $contact_r['ytb'] ?>" class="d-inline-block text-dark fs-5 me-2">
+                    <a href="#" class="d-inline-block text-dark fs-5 me-2">
                         <i class="bi bi-youtube me-1"></i>
                     </a>
-                    <a href="<?php echo $contact_r['ins'] ?>" class="d-inline-block text-dark fs-5 ">
+                    <a href="#" class="d-inline-block text-dark fs-5 ">
                         <i class="bi bi-instagram me-1"></i>
                     </a>
                 </div>

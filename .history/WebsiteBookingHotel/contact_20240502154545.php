@@ -86,7 +86,7 @@
                     <?php  
                     if($contact_r['fb'] != ''){
                         echo<<< data
-                        <a href="$contact_r[fb]" class="d-inline-block text-dark fs-5 me-2">
+                        <a href="#" class="d-inline-block text-dark fs-5 me-2">
                         <i class="bi bi-facebook me-1"></i>
                     </a>
                     data;
@@ -94,10 +94,10 @@
                     ?>
 
 
-                    <a href="<?php echo $contact_r['ytb'] ?>" class="d-inline-block text-dark fs-5 me-2">
+                    <a href="#" class="d-inline-block text-dark fs-5 me-2">
                         <i class="bi bi-youtube me-1"></i>
                     </a>
-                    <a href="<?php echo $contact_r['ins'] ?>" class="d-inline-block text-dark fs-5 ">
+                    <a href="#" class="d-inline-block text-dark fs-5 ">
                         <i class="bi bi-instagram me-1"></i>
                     </a>
                 </div>

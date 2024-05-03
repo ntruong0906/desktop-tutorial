@@ -79,25 +79,17 @@
                     <h5 class="mt-4 ">Email</h5>
                     <a href="<?php echo $contact_r['email'] ?>"
                         class="d-inline-block mb-2 text-decoration-none text-dark">
-                        <i class="bi bi-envelope-fill"></i><?php echo $contact_r['email'] ?>
+                        <i class="bi bi-envelope-fill"></i>phannhattruong8291@gmail.com
                     </a>
 
                     <h5 class="mt-4">Follow us</h5>
-                    <?php  
-                    if($contact_r['fb'] != ''){
-                        echo<<< data
-                        <a href="$contact_r[fb]" class="d-inline-block text-dark fs-5 me-2">
+                    <a href="#" class="d-inline-block text-dark fs-5 me-2">
                         <i class="bi bi-facebook me-1"></i>
                     </a>
-                    data;
-                    }
-                    ?>
-
-
-                    <a href="<?php echo $contact_r['ytb'] ?>" class="d-inline-block text-dark fs-5 me-2">
+                    <a href="#" class="d-inline-block text-dark fs-5 me-2">
                         <i class="bi bi-youtube me-1"></i>
                     </a>
-                    <a href="<?php echo $contact_r['ins'] ?>" class="d-inline-block text-dark fs-5 ">
+                    <a href="#" class="d-inline-block text-dark fs-5 ">
                         <i class="bi bi-instagram me-1"></i>
                     </a>
                 </div>

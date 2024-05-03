@@ -9,12 +9,12 @@
     <?php require ('inc/links.php'); ?>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
-    @media screen and (max-width: 575px) {
-        .availability-form {
-            margin: 25px;
-            padding: 0 35px;
+        @media screen and (max-width: 575px) {
+            .availability-form {
+                margin: 25px;
+                padding: 0 35px;
+            }
         }
-    }
     </style>
 </head>
 
@@ -385,57 +385,43 @@
 
     <!-- Reach us -->
 
-
-
     <h2 class="mt-5 pt-4 mb-4 text-center fw-bold h-font">REACH US</h2>
 
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-8 p-4 mb-lg-0 mb-3 bg-white rounded">
-                <iframe src="<?php  echo $contact_r['iframe']?>" class="w-100 rounded" height="320px" loading="lazy"
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1387.4586037672818!2d107.14647667339156!3d10.395697334627467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31756fd4554f0cf5%3A0xb24fd23bf641fa40!2zVsWpbmcgVMOgdSwgQsOgIFLhu4thIC0gVsWpbmcgVMOgdSwgVmnhu4d0IE5hbQ!5e0!3m2!1svi!2s!4v1710661690680!5m2!1svi!2s"
+                    class="w-100 rounded" height="320px" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
 
             </div>
             <div class="col-lg-4 col-md-4">
                 <div class="bg-white p-4 rounded mb-4">
                     <h5>Call us</h5>
-                    <a href="tel: +<?php  echo $contact_r['pn1']?>"
-                        class="d-inline-block mb-2 text-decoration-none text-dark">
-                        <i class="bi bi-telephone-fill"></i>+<?php  echo $contact_r['pn1']?>
+                    <a href="tel: +84398897449" class="d-inline-block mb-2 text-decoration-none text-dark">
+                        <i class="bi bi-telephone-fill"></i>+84398897449
                     </a>
                     <br>
-                    <?php
-                        if($contact_r['pn2'] != ''){
-                            echo<<<data
-                            <a href="tel: +$contact_r[pn2]" class="d-inline-block text-decoration-none text-dark">
-                            <i class="bi bi-telephone-fill"></i>+$contact_r[pn2]
-                            </a>
-                            data;
-                        }
-                        ?>
+                    <a href="tel: +84902034018" class="d-inline-block text-decoration-none text-dark">
+                        <i class="bi bi-telephone-fill"></i>+84902034018
+                    </a>
                 </div>
                 <div class="bg-white p-4 rounded mb-4">
                     <h5>Follow us</h5>
-                    <?php 
-                           if($contact_r['fb'] != '') {
-                            echo <<<data
-                            <a href="$contact_r[fb]" class="d-inline-block mb-3">
-                                <span class="badge bg-light text-dark fs-6 p-2">
-                                    <i class="bi bi-facebook me-1"></i> Facebook
-                                </span>
-                            </a>
-                            <br>
-                        data;
-                        }
-                        ?>
-
-                    <a href="<?php echo $contact_r['ytb']?>" class="d-inline-block mb-3">
+                    <a href="#" class="d-inline-block mb-3">
+                        <span class="badge bg-light text-dark fs-6 p-2">
+                            <i class="bi bi-facebook"></i> Facebook
+                        </span>
+                    </a>
+                    <br>
+                    <a href="#" class="d-inline-block mb-3">
                         <span class="badge bg-light text-dark fs-6 p-2">
                             <i class="bi bi-youtube"></i> Youtube
                         </span>
                     </a>
                     <br>
-                    <a href="<?php echo $contact_r['ins']?>" class="d-inline-block mb-3">
+                    <a href="#" class="d-inline-block mb-3">
                         <span class="badge bg-light text-dark fs-6 p-2">
                             <i class="bi bi-instagram"></i> Instagram
                         </span>
@@ -454,49 +440,49 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
-    </script>
+        </script>
     <script>
-    var swiper = new Swiper(".swiper-container", {
-        spaceBetween: 30,
-        effect: "fade",
-        loop: true,
-        autoplay: {
-            delay: 3500,
-            disableOnInteraction: false,
-        }
-    });
-    var swiper = new Swiper(".swiper-testimonials", {
-        effect: "coverflow",
-        grabCursor: true,
-        centeredSlides: true,
-        slidesPerView: "auto",
-        slidesPerView: "3",
-        loop: true,
-        coverflowEffect: {
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: false,
-        },
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        breakpoints: {
-            320: {
-                slidesPerView: 1,
+        var swiper = new Swiper(".swiper-container", {
+            spaceBetween: 30,
+            effect: "fade",
+            loop: true,
+            autoplay: {
+                delay: 3500,
+                disableOnInteraction: false,
+            }
+        });
+        var swiper = new Swiper(".swiper-testimonials", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            slidesPerView: "3",
+            loop: true,
+            coverflowEffect: {
+                rotate: 50,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+                slideShadows: false,
             },
-            640: {
-                slidesPerView: 1,
+            pagination: {
+                el: ".swiper-pagination",
             },
-            768: {
-                slidesPerView: 2,
-            },
-            1024: {
-                slidesPerView: 3,
-            },
-        }
-    });
+            breakpoints: {
+                320: {
+                    slidesPerView: 1,
+                },
+                640: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                },
+            }
+        });
     </script>
 </body>
 
