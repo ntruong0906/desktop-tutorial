@@ -33,7 +33,7 @@ adminLogin();
 
     <div class="container-fluid" id="main-content">
         <div class="row">
-            <div class="col-lg-10 ms-auto p-4 overflow-hidden">
+            < class="col-lg-10 ms-auto p-4 overflow-hidden">
                 <h3 class="mb-4">SETTINGS</h3>
 
                 <!--General settings section -->
@@ -313,11 +313,11 @@ adminLogin();
                         </form>
                     </div>
                 </div>
-            </div>
         </div>
+    </div>
 
-        <?php require ('inc/scripts.php'); ?>
-        <script src="scripts/settings.js"> </script>
+    <?php require ('inc/scripts.php'); ?>
+    <script src="scripts/settings.js"> </script>
 </body>
 
 </html>

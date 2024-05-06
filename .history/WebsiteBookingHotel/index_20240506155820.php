@@ -38,7 +38,7 @@
                 }
                 
                 ?>
-                <!-- <div class="swiper-slide">
+                <div class="swiper-slide">
                     <img src="images/carousel/IMG_15372.png" class="w-100 d-block" />
                 </div>
                 <div class="swiper-slide">
@@ -55,7 +55,7 @@
                 </div>
                 <div class="swiper-slide">
                     <img src="images/carousel/IMG_99736.png" class="w-100 d-block" />
-                </div> -->
+                </div>
             </div>
         </div>
     </div>

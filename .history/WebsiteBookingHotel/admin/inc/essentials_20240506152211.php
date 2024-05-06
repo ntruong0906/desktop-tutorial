@@ -2,7 +2,7 @@
 
 define ('SITE_URL','http://127.0.0.1/hbwebsite/');
 define ('ABOUT_IMG_PATH',SITE_URL.'images/about/');
-define ('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
+define ('CAROUSEL_IMG_PATH',SITE_URL.'images/about/');
 
 
 
