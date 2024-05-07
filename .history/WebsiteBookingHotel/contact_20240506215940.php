@@ -136,7 +136,7 @@
         if($res == 1){
             alert('success','Mail sent!');
         }else{
-            alert('error','Server Down! Try again later.');
+            alert('error','Server Down! Try again later.!');
         }
     }
 

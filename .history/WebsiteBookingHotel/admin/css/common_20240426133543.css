@@ -41,19 +41,6 @@ input::-webkit-inner-spin-button {
     margin: 0 auto;
     height: 1.7px;
 }
-::-webkit-scrollbar{
-    width: 10px;
-}
-::-webkit-scrollbar-track{
-    background: #f1f1f1;
-}
-::-webkit-scrollbar-thumb{
-    background: rgb(36,36,36);
-}
-::-webkit-scrollbar-thumb:hover{
-    background:#555;
-}
-
 
 .custom-alert{
     position: fixed;

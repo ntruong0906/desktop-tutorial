@@ -125,22 +125,6 @@
         </div>
     </div>
 
-    <?php  
-    if(isset($_POST['send']))
-    {
-        $frm_data = filteration($_POST);
-        $q = "INSERT INTO `user_queries`(`name`,`email`,`subject`,`message`) VALUES (?,?,?,?)";
-        $values = [$frm_data['name'],$frm_data['email'],$frm_data['subject'],$frm_data['message']];
-
-        $res = insert($q,$values,'ssss');
-        if($res == 1){
-            alert('success','Mail sent!');
-        }else{
-            alert('error','Server Down! Try again later.');
-        }
-    }
-
-    ?>
     <!-- footer -->
     <?php require ('inc/footer.php'); ?>
 

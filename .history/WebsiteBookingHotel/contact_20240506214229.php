@@ -110,14 +110,13 @@
                         </div>
                         <div class="mt-3">
                             <label class="form-label" style="font-weight: 500;">Subject</label>
-                            <input name="subject" required type="text" class="form-control shadow-none">
+                            <input type="text" class="form-control shadow-none">
                         </div>
                         <div class="mt-3">
                             <label class="form-label" style="font-weight: 500;">Message</label>
-                            <textarea name="message" required class="form-control shadow-none" rows="1"
-                                style="resize: none;"></textarea>
+                            <textarea class="form-control shadow-none" rows="1" style="resize: none;"></textarea>
                         </div>
-                        <button type="submit" name="send" class="btn text-white custom-bg mt-3">SEND</button>
+                        <button type="submit" class="btn text-white custom-bg mt-3">SEND</button>
                     </form>
 
                 </div>
@@ -125,22 +124,6 @@
         </div>
     </div>
 
-    <?php  
-    if(isset($_POST['send']))
-    {
-        $frm_data = filteration($_POST);
-        $q = "INSERT INTO `user_queries`(`name`,`email`,`subject`,`message`) VALUES (?,?,?,?)";
-        $values = [$frm_data['name'],$frm_data['email'],$frm_data['subject'],$frm_data['message']];
-
-        $res = insert($q,$values,'ssss');
-        if($res == 1){
-            alert('success','Mail sent!');
-        }else{
-            alert('error','Server Down! Try again later.');
-        }
-    }
-
-    ?>
     <!-- footer -->
     <?php require ('inc/footer.php'); ?>
 
