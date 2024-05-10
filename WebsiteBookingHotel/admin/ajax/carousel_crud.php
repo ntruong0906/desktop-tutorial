@@ -11,7 +11,7 @@
             echo $img_r;
         }else if($img_r == 'inv_size'){
             echo $img_r;
-        }else if($img_r == 'udp_failed'){
+        }else if($img_r == 'upd_failed'){
             echo $img_r;
         }else{
             $q = "INSERT INTO `carousel`(`picture`) VALUES (?)";

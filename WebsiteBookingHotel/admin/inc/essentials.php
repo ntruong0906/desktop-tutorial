@@ -1,14 +1,21 @@
 <?php
 
-define ('SITE_URL','http://127.0.0.1/hbwebsite/');
-define ('ABOUT_IMG_PATH',SITE_URL.'images/about/');
-define ('CAROUSEL_IMG_PATH',SITE_URL.'images/carousel/');
+//frontend purpose data
+define('SITE_URL', 'http://127.0.0.1/hbwebsite/');
+define('ABOUT_IMG_PATH', SITE_URL . 'images/about/');
+define('CAROUSEL_IMG_PATH', SITE_URL . 'images/carousel/');
+define('FACILITIES_IMG_PATH', SITE_URL . 'images/facilities/');
 
 
 
-define ('UPLOAD_IMAGE_PATH',$_SERVER['DOCUMENT_ROOT'].'/hbwebsite/images/');
-define ('ABOUT_FOLDER','about/');
-define ('CAROUSEL_FOLDER','carousel/');
+//backend upload process meeds this data
+define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/hbwebsite/images/');
+define('ABOUT_FOLDER', 'about/');
+define('CAROUSEL_FOLDER', 'carousel/');
+define('FACILITIES_FOLDER', 'facilities/');
+
+
+
 function adminLogin()
 {
     session_start();
@@ -37,31 +44,54 @@ function alert($type, $msg)
             alert;
 }
 
-function uploadImage($image,$folder){
-    $valid_mime = ['image/jpeg','image/pnp','image/webp'];
+function uploadImage($image, $folder)
+{
+    $valid_mime = ['image/jpeg', 'image/pnp', 'image/webp'];
     $img_mime = $image['type'];
-    if(!in_array($img_mime,$valid_mime)){
+    if (!in_array($img_mime, $valid_mime)) {
         return 'ivn_img';
-    }else if(($image['size']/(1024*1024))> 2){
+    } else if (($image['size'] / (1024 * 1024)) > 2) {
         return 'ivn_size';
-    }else{
-        $ext = pathinfo($image['name'],PATHINFO_EXTENSION);
-        $rname = 'IMG_'.random_int(11111,99999).".$ext";
-        $img_path = UPLOAD_IMAGE_PATH.$folder.$rname;
-        if(move_uploaded_file($image['tmp_name'],$img_path)){
+    } else {
+        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+        $rname = 'IMG_' . random_int(11111, 99999) . ".$ext";
+        $img_path = UPLOAD_IMAGE_PATH . $folder . $rname;
+        if (move_uploaded_file($image['tmp_name'], $img_path)) {
             return $rname;
-        }
-        else{
-            return 'udp_failed';
+        } else {
+            return 'upd_failed';
         }
     }
 }
 
 
-function deleteImage($image , $folder){
-    if(unlink(UPLOAD_IMAGE_PATH.$folder.$image)){
+function uploadSVGImage($image, $folder)
+{
+    $valid_mime = ['image/svg+xml'];
+    $img_mime = $image['type'];
+    if (!in_array($img_mime, $valid_mime)) {
+        return 'ivn_img'; //invalid imgage mine or format
+
+    } else if (($image['size'] / (1024 * 1024)) > 1) {
+        return 'ivn_size'; //invalid size greater than 2mb
+
+    } else {
+        $ext = pathinfo($image['name'], PATHINFO_EXTENSION);
+        $rname = 'IMG_' . random_int(11111, 99999) . ".$ext";
+        $img_path = UPLOAD_IMAGE_PATH . $folder . $rname;
+        if (move_uploaded_file($image['tmp_name'], $img_path)) {
+            return $rname;
+        } else {
+            return 'upd_failed';
+        }
+    }
+}
+
+function deleteImage($image, $folder)
+{
+    if (unlink(UPLOAD_IMAGE_PATH . $folder . $image)) {
         return true;
-    }else{
+    } else {
         return false;
     }
 }
