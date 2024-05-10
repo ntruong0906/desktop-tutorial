@@ -13,6 +13,11 @@ function alert(type, msg) {
                 </div>
                 `;
     document.body.append(element);
+    setTimeout(remArlert,2000);
+}
+
+function remArlert(){
+    document.getElementsByClassName('arlert')[0].remove();
 }
 
 function setActive() {

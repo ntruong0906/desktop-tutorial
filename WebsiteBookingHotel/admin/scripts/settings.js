@@ -12,13 +12,13 @@ let member_picture_inp = document.getElementById('member_picture_inp')
 function get_general() {
     let site_title = document.getElementById('site_title');
     let site_about = document.getElementById('site_about');
-    let shutdown_toggle = document.getElementById('shutdown_toggle');
+    let shutdown_toggle = document.getElementById('shutdown-toggle');
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/settings_crud.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    xhr.onload = function() {
+    xhr.onload = function () {
         general_data = JSON.parse(this.responseText);
 
         site_title.innerText = general_data.site_title;
@@ -28,20 +28,25 @@ function get_general() {
         site_about_inp.value = general_data.site_about;
 
         if (general_data.shutdown == 0) {
-            shutdown_toggle.checked = false;
             shutdown_toggle.value = 0;
+            shutdown_toggle.checked = false;
+
         } else {
-            shutdown_toggle.checked = true;
             shutdown_toggle.value = 1;
+            shutdown_toggle.checked = true;
         }
     }
 
     xhr.send('get_general');
 }
 
-general_s_form.addEventListener('submit', function(e) {
+document.addEventListener('DOMContentLoaded', function () {
+    get_general();
+});
+
+general_s_form.addEventListener('submit', function (e) {
     e.preventDefault();
-    upd_general(site_title_inp.value, site_about_inp.value)
+    upd_general(site_title_inp.value, site_about_inp.value);
 });
 
 function upd_general(site_title_val, site_about_val) {
@@ -49,10 +54,10 @@ function upd_general(site_title_val, site_about_val) {
     xhr.open("POST", "ajax/settings_crud.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    xhr.onload = function() {
+    xhr.onload = function () {
 
         var myModal = document.getElementById('general-s');
-        var modal = bootstrap.Modal.getInstance(myModal)
+        var modal = bootstrap.Modal.getInstance(myModal);
         modal.hide();
 
         if (this.responseText == 1) {
@@ -63,24 +68,22 @@ function upd_general(site_title_val, site_about_val) {
         }
     }
 
-    xhr.send('site_title =' + site_title_val + 'site_about=' + site_about_val + '&upd_general');
+    xhr.send('site_title=' + site_title_val + '&site_about=' + site_about_val + '&upd_general');
 }
 
-function upd_shutdown(val) {
+function upd_shutdown(val,general_data) {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/settings_crud.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    xhr.onload = function() {
+    xhr.onload = function () {
         if (this.responseText == 1 && general_data.shutdown == 0) {
             alert('success', 'Site has been shutdown!');
         } else {
             alert('success', 'Shutdown mode changes off!');
         }
         get_general();
-
     }
-
     xhr.send('upd_shutdown=' + val);
 }
 
@@ -92,7 +95,7 @@ function get_contacts() {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/settings_crud.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function() {
+    xhr.onload = function () {
         contacts_data = JSON.parse(this.responseText);
         contacts_data = Object.values(contacts_data);
         console.log(contacts_data);
@@ -116,12 +119,12 @@ function contacts_inp(contacts_data) {
     }
 }
 
-contacts_s_form.addEventListener('submit', function(e) {
+contacts_s_form.addEventListener('submit', function (e) {
     e.preventDefault();
-    udp_contacts();
+    upd_contacts();
 });
 
-function udp_contacts() {
+function upd_contacts() {
     let index = ['address', 'google_map', 'pn1', 'pn2', 'email', 'fb', 'ytb', 'ins', 'iframe'];
     let contacts_inp_id = ['address_inp', 'google_map_inp', 'pn1-inp', 'pn2_inp', 'email_inp', 'fb_inp',
         'ytb_inp', 'ins_inp', 'iframe_inp'
@@ -130,12 +133,12 @@ function udp_contacts() {
     for (i = 0; i < index.length; i++) {
         data_str += index[i] + "=" + document.getElementById(contacts_inp_id[i]).value + '&';
     }
-    data_str += "udp_contacts";
+    data_str += "upd_contacts";
 
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/settings_crud.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-    xhr.onload = function() {
+    xhr.onload = function () {
         var myModal = document.getElementById('contacts-s');
         var modal = bootstrap.Modal.getInstance(myModal)
         modal.hide();
@@ -151,7 +154,7 @@ function udp_contacts() {
 
 }
 
-team_s_form.addEventListener('submit', function(e) {
+team_s_form.addEventListener('submit', function (e) {
     e.preventDefault();
     add_member();
 });
@@ -166,7 +169,7 @@ function add_member() {
     let xhr = new XMLHttpRequest();
     xhr.open("POST", "ajax/settings_crud.php", true);
 
-    xhr.onload = function() {
+    xhr.onload = function () {
         var myModal = document.getElementById('team-s');
         var modal = bootstrap.Modal.getInstance(myModal)
         modal.hide();
@@ -175,7 +178,7 @@ function add_member() {
             alert('error', 'Only JPG and PNG images are allowed!');
         } else if (this.responseText == 'inv_size') {
             alert('error', 'Image should be less 2MB!');
-        } else if (this.responseText == 'udp_failed') {
+        } else if (this.responseText == 'upd_failed') {
             alert('error', 'Image Upload Failed . Server Down');
         } else {
             alert('success', 'New Member Added!');
@@ -193,7 +196,7 @@ function get_members() {
     xhr.open("POST", "ajax/settings_crud.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    xhr.onload = function() {
+    xhr.onload = function () {
         document.getElementById('team-data').innerHTML = this.responseText;
     }
 
@@ -205,7 +208,7 @@ function rem_member(val) {
     xhr.open("POST", "ajax/settings_crud.php", true);
     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
 
-    xhr.onload = function() {
+    xhr.onload = function () {
         if (this.responseText == 1) {
             alert('success', 'Member removed!');
             get_members();
@@ -216,7 +219,7 @@ function rem_member(val) {
 
     xhr.send('rem_member=' + val);
 }
-window.onload = function() {
+window.onload = function () {
     get_general();
     get_contacts();
     get_members();

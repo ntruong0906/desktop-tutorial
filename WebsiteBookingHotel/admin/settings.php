@@ -1,4 +1,4 @@
-<?php
+<form?php
 require ('inc/essentials.php');
 adminLogin();
 
@@ -15,16 +15,16 @@ adminLogin();
     <?php require ('inc/links.php'); ?>
 </head>
 <style>
-.custom-alert {
-    position: fixed;
-    top: 80px;
-    right: 25px;
-}
+    .custom-alert {
+        position: fixed;
+        top: 80px;
+        right: 25px;
+    }
 
-#dashboard-menu {
-    position: fixed;
-    height: 100%;
-}
+    #dashboard-menu {
+        position: fixed;
+        height: 100%;
+    }
 </style>
 
 <body class="bg-light">
@@ -80,7 +80,7 @@ adminLogin();
                                     <button type="button"
                                         onclick="site_title.value = general_data.site_title, site_about.value = general_data.site_about"
                                         class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
-                                    <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
+                                    <button type="submit" onclick="upd_general(site_title.value, site_about.value)" class="btn custom-bg text-white shadow-none">SUBMIT</button>
                                 </div>
                             </div>
                         </form>
@@ -94,8 +94,7 @@ adminLogin();
                             <h5 class="card-title m-0">--Shutdown Website</h5>
                             <div class="form-check form-switch">
                                 <form>
-                                    <input onclick="upd_shutdown(this.value)" class="form-check-input" type="checkbox">
-
+                                    <input onchange="upd_shutdown(this.value)" class="form-check-input" type="checkbox" id="shutdown-toggle"></input>
                                 </form>
 
                             </div>
@@ -263,6 +262,7 @@ adminLogin();
                                 <i class="bi bi-plus-square"></i> Add
                             </button>
                         </div>
+
                         <div class="row" id="team-data">
                             <div class="col-md-2 mb-3">
                                 <div class="card bg-dark text white">

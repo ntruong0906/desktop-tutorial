@@ -19,7 +19,7 @@
     {
         $frm_data = filteration($_POST);
 
-        $q = "UPDATE `settings` SET `site_title` =?, `site_about` =? WHERE `sr_no` =?";
+        $q = "UPDATE `settings` SET `site_title` =?, `site_about` =?, `shutdown` =? WHERE `sr_no` =?";
         $values = [$frm_data['site_title'],$frm_data['site_about'],1];
         $res = update($q,$values,'ssi');
         echo $res;
@@ -63,7 +63,7 @@
             echo $img_r;
         }else if($img_r == 'inv_size'){
             echo $img_r;
-        }else if($img_r == 'udp_failed'){
+        }else if($img_r == 'upd_failed'){
             echo $img_r;
         }else{
             $q = "INSERT INTO `team_details`(`name`,`picture`) VALUES (?,?)";
