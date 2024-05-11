@@ -15,16 +15,16 @@ adminLogin();
     <?php require ('inc/links.php'); ?>
 </head>
 <style>
-.custom-alert {
-    position: fixed;
-    top: 80px;
-    right: 25px;
-}
+    .custom-alert {
+        position: fixed;
+        top: 80px;
+        right: 25px;
+    }
 
-#dashboard-menu {
-    position: fixed;
-    height: 100%;
-}
+    #dashboard-menu {
+        position: fixed;
+        height: 100%;
+    }
 </style>
 
 <body class="bg-light">
@@ -84,9 +84,10 @@ adminLogin();
                                     </div>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" onclick="carousel_picture.value=''"
-                                        class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
-                                    <button type="submit" class="btn custom-bg text-white shadow-none">SUBMIT</button>
+                                    <button type="button" class="btn text-secondary shadow-none"
+                                        data-bs-dismiss="modal">CANCEL</button>
+                                    <button type="submit" onclick="carousel_picture.value=''"
+                                        class="btn custom-bg text-white shadow-none">SUBMIT</button>
                                 </div>
                             </div>
                         </form>
