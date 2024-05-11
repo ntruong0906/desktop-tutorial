@@ -1,4 +1,4 @@
-<form?php
+<?php
 require ('inc/essentials.php');
 adminLogin();
 
@@ -80,7 +80,8 @@ adminLogin();
                                     <button type="button"
                                         onclick="site_title.value = general_data.site_title, site_about.value = general_data.site_about"
                                         class="btn text-secondary shadow-none" data-bs-dismiss="modal">CANCEL</button>
-                                    <button type="submit" onclick="upd_general(site_title.value, site_about.value)" class="btn custom-bg text-white shadow-none">SUBMIT</button>
+                                    <button type="button" onclick="upd_general(site_title.value, site_about.value)"
+                                        class="btn custom-bg text-white shadow-none">SUBMIT</button>
                                 </div>
                             </div>
                         </form>
@@ -94,7 +95,8 @@ adminLogin();
                             <h5 class="card-title m-0">--Shutdown Website</h5>
                             <div class="form-check form-switch">
                                 <form>
-                                    <input onchange="upd_shutdown(this.value)" class="form-check-input" type="checkbox" id="shutdown-toggle"></input>
+                                    <input onchange="upd_shutdown(this.value)" class="form-check-input" type="checkbox"
+                                        id="shutdown-toggle"></input>
                                 </form>
 
                             </div>
@@ -192,14 +194,14 @@ adminLogin();
                                                     <label class="form-label fw-bold">Phone Number (with country code)
                                                     </label>
                                                     <div class="input-group mb-3">
-                                                        <span class="input-group-text"><i
-                                                                class="bi bi-telephone-fill"></i></span>
+                                                        <span class="input-group-text">
+                                                            <i class="bi bi-telephone-fill"></i></span>
                                                         <input type="number" name="pn1" id="pn1_inp"
                                                             class="form-control shadow-none" required>
                                                     </div>
                                                     <div class="input-group mb-3">
-                                                        <span class="input-group-text"><i
-                                                                class="bi bi-telephone-fill"></i></span>
+                                                        <span class="input-group-text">
+                                                            <i class="bi bi-telephone-fill"></i></span>
                                                         <input type="number" name="pn2" id="pn2_inp"
                                                             class="form-control shadow-none">
                                                     </div>
@@ -220,8 +222,8 @@ adminLogin();
                                                             class="form-control shadow-none" required>
                                                     </div>
                                                     <div class="input-group mb-3">
-                                                        <span class="input-group-text"><i
-                                                                class="bi bi-youtube"></i></span>
+                                                        <span class="input-group-text">
+                                                            <i class="bi bi-youtube"></i></span>
                                                         <input type="text" name="ytb" id="ytb_inp"
                                                             class="form-control shadow-none" required>
                                                     </div>
