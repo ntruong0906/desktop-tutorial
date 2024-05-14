@@ -5,14 +5,17 @@ define('SITE_URL', 'http://127.0.0.1/hbwebsite/');
 define('ABOUT_IMG_PATH', SITE_URL . 'images/about/');
 define('CAROUSEL_IMG_PATH', SITE_URL . 'images/carousel/');
 define('FACILITIES_IMG_PATH', SITE_URL . 'images/facilities/');
+define('ROOMS_IMG_PATH', SITE_URL . 'images/rooms/');
+
 
 
 
 //backend upload process meeds this data
-define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/hbwebsite/images/');
+define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/WebsiteBookingHotel(1)/images');
 define('ABOUT_FOLDER', 'about/');
 define('CAROUSEL_FOLDER', 'carousel/');
 define('FACILITIES_FOLDER', 'facilities/');
+define('ROOMS_FOLDER', 'rooms/');
 
 
 
@@ -46,7 +49,7 @@ function alert($type, $msg)
 
 function uploadImage($image, $folder)
 {
-    $valid_mime = ['image/jpeg', 'image/pnp', 'image/webp'];
+    $valid_mime = ['image/jpeg', 'image/png', 'image/webp'];
     $img_mime = $image['type'];
     if (!in_array($img_mime, $valid_mime)) {
         return 'ivn_img';
@@ -72,7 +75,7 @@ function uploadSVGImage($image, $folder)
     if (!in_array($img_mime, $valid_mime)) {
         return 'ivn_img'; //invalid imgage mine or format
 
-    } else if (($image['size'] / (1024 * 1024)) > 1) {
+    } else if (($image['size'] / (1024 * 1024)) > 4) {
         return 'ivn_size'; //invalid size greater than 2mb
 
     } else {
