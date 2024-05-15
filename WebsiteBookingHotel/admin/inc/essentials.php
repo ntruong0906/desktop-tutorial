@@ -1,17 +1,14 @@
 <?php
 
-//frontend purpose data
+// Define image paths for frontend
 define('SITE_URL', 'http://127.0.0.1/hbwebsite/');
 define('ABOUT_IMG_PATH', SITE_URL . 'images/about/');
 define('CAROUSEL_IMG_PATH', SITE_URL . 'images/carousel/');
 define('FACILITIES_IMG_PATH', SITE_URL . 'images/facilities/');
 define('ROOMS_IMG_PATH', SITE_URL . 'images/rooms/');
 
-
-
-
-//backend upload process meeds this data
-define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/WebsiteBookingHotel(1)/images');
+// Define image paths for backend
+define('UPLOAD_IMAGE_PATH', $_SERVER['DOCUMENT_ROOT'] . '/WebsiteBookingHotel(1)/images/');
 define('ABOUT_FOLDER', 'about/');
 define('CAROUSEL_FOLDER', 'carousel/');
 define('FACILITIES_FOLDER', 'facilities/');
